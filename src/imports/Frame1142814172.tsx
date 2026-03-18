@@ -1,17 +1,13 @@
+import { IMAGES } from "../constants/images";
 import svgPaths from "./svg-46ba0jw42o";
-import imgImage14 from "figma:asset/80845e794122c53f8551457d80143913d0394393.png";
-import imgImage15 from "figma:asset/1db482a64ccc90c4798ca6cedd637f89fb545412.png";
-import imgImage16 from "figma:asset/167b6b1fc1e0e7718762282f3d7594ae626a4b9e.png";
-import imgImage17 from "figma:asset/d520fcb770f6cb380026445d67d8a8141428a699.png";
-import imgImage18 from "figma:asset/48a90a75d931591a8169d88baadc0bbb2711fce0.png";
-import imgImage23 from "figma:asset/5cf28f0cf7ec17f1981626b49beb7294f97d64c8.png";
+
 
 function Image() {
   return (
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[127.98%] left-[6.85%] max-w-none top-0 w-[86.29%]" src={imgImage14} />
+          <img alt="" className="absolute h-[127.98%] left-[6.85%] max-w-none top-0 w-[86.29%]" src={IMAGES.homepage.image1} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
@@ -50,7 +46,7 @@ function Image1() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[120%] left-[4.65%] max-w-none top-[0.06%] w-[90.73%]" src={imgImage15} />
+          <img alt="" className="absolute h-[120%] left-[4.65%] max-w-none top-[0.06%] w-[90.73%]" src={IMAGES.homepage.image1} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
@@ -89,7 +85,7 @@ function Image2() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgImage16} />
+          <img alt="" className="absolute max-w-none object-cover size-full" src={IMAGES.homepage.image1} />
           <div className="absolute bg-[#c0c0c0] inset-0" />
         </div>
       </div>
@@ -128,7 +124,7 @@ function Image3() {
   return (
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[566px] left-1/2 top-1/2 w-[378px]" data-name="image 15">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage17} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image1} />
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
         <div className="absolute inset-[8.33%]" data-name="Vector">
@@ -198,7 +194,7 @@ function Image4() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[105.81%] left-[6.35%] max-w-none top-[0.08%] w-[87.3%]" src={imgImage18} />
+          <img alt="" className="absolute h-[105.81%] left-[6.35%] max-w-none top-[0.08%] w-[87.3%]" src={IMAGES.homepage.image1} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
@@ -238,7 +234,7 @@ function Image5() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[514px] left-1/2 top-1/2 w-[385.5px]" data-name="image 23">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgImage23} />
+          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={IMAGES.homepage.image1} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">

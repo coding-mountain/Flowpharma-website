@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, X, Mail, MapPin, Phone } from 'lucide-react';
 import { Footer } from './Footer';
-import mgtImgDylan from "figma:asset/1db482a64ccc90c4798ca6cedd637f89fb545412.png";
+import { IMAGES } from '../../constants/images';
 
 interface ContactPageContentProps {
   onClose: () => void;
@@ -36,16 +36,16 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
         {/* Breadcrumbs and Close Button */}
         <div className="flex items-center justify-between mb-6 sm:mb-8 md:mb-10">
           <div className="flex items-center space-x-2 text-[12px] sm:text-[13px] text-gray-500">
-            <span 
+            <span
               className="cursor-pointer hover:text-gray-900 transition-colors"
               onClick={onClose}
             >
               Home
             </span>
-            <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> 
+            <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             <span className="text-gray-900 font-medium">Contact Us</span>
           </div>
-          
+
           <button
             onClick={onClose}
             className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300 flex-shrink-0"
@@ -71,7 +71,7 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
           <div>
             <div className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-medium text-gray-900 mb-4 sm:mb-6">Send us a Message</h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
@@ -89,7 +89,7 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
                       placeholder="John Doe"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -153,7 +153,7 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
             {/* Contact Info Card */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl sm:rounded-2xl p-6 sm:p-8">
               <h2 className="text-lg sm:text-xl font-medium text-gray-900 mb-4 sm:mb-6">Contact Information</h2>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-200">
@@ -198,9 +198,9 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
             {/* Dylan Bruno Card */}
             <div className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm">
               <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
-                <img 
-                  src={mgtImgDylan} 
-                  alt="Dylan Bruno" 
+                <img
+                  src={IMAGES.ourTeams.team8}
+                  alt="Dylan Bruno"
                   className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover flex-shrink-0"
                 />
                 <div className="min-w-0">

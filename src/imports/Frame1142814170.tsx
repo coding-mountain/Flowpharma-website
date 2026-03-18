@@ -1,6 +1,5 @@
+import { IMAGES } from "../constants/images";
 import svgPaths from "./svg-a2617wsml";
-import imgImage24 from "figma:asset/317164733ee30d8a66b77d743eee51961e8e8c01.png";
-import imgRectangle10 from "figma:asset/166637ad57862826f24edf335a37bd6dca0b9de9.png";
 
 function Background() {
   return (
@@ -90,7 +89,7 @@ function DeRiskCard() {
         </div>
       </div>
       <div className="h-[173px] relative rounded-[12px] shrink-0 w-full">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full" src={imgRectangle10} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full" src={IMAGES.homepage.image1} />
       </div>
       <Frame />
     </div>
@@ -422,7 +421,7 @@ function Frame16() {
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between px-[40px] relative w-full">
           <div className="h-[799px] relative rounded-[24px] shrink-0 w-[804px]" data-name="image 24">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[24px] size-full" src={imgImage24} />
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[24px] size-full" src={IMAGES.homepage.image1} />
           </div>
           <Frame15 />
         </div>

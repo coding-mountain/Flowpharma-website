@@ -1,4 +1,4 @@
-import imgImage16 from "figma:asset/d55c1a05a7e0dc1e3d7e1aeed2fd9189507450ba.png";
+import imgImage16 from "/src/assets/d55c1a05a7e0dc1e3d7e1aeed2fd9189507450ba.png";
 
 function TitleSubtitle() {
   return (

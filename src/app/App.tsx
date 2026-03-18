@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Menu, ArrowUpRight, ChevronRight } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import logoImg from 'figma:asset/b701d1a2ec88b61043dd3be1e0117941c21ad9b6.png';
-import logoWhiteImg from 'figma:asset/4d977721b2c6317ffd0445b32677bd4971debe28.png';
-import heroBgImg from 'figma:asset/fb7a942012799352cdf6aafeb0f3ce67a4daf3d0.png';
 import { FlowVaxProvenScience } from './components/FlowVaxProvenScience';
 import { PatentProtection } from './components/PatentProtection';
 import { ClinicalReadiness } from './components/ClinicalReadiness';
@@ -14,6 +11,7 @@ import { StablePageContent } from './components/StablePageContent';
 import { SolutionPageContent } from './components/SolutionPageContent';
 import { OurTeamPageContent } from './components/OurTeamPageContent';
 import { ContactPageContent } from './components/ContactPageContent';
+import { IMAGES } from '../constants/images';
 
 export default function App() {
   const [isSafeOpen, setIsSafeOpen] = useState(false);
@@ -43,15 +41,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-blue-100">
       {/* Header */}
-      <header className={`flex items-center justify-between px-6 py-5 md:px-12 sticky top-0 z-50 transition-all duration-300 border-b border-black/5 ${
-        isScrolled ? 'bg-[#050505]' : 'bg-white'
-      }`}>
+      <header className={`flex items-center justify-between px-6 py-5 md:px-12 sticky top-0 z-50 transition-all duration-300 border-b border-black/5 ${isScrolled ? 'bg-[#050505]' : 'bg-white'
+        }`}>
         <div className="flex items-center">
           {/* Logo */}
           <div className="flex items-center cursor-pointer select-none">
-            <img 
-              src={isScrolled ? logoWhiteImg : logoImg} 
-              alt="Flo Pharma Logo" 
+            <img
+              src={isScrolled ? IMAGES.homepage.logoWhite : IMAGES.homepage.logo}
+              alt="Flo Pharma Logo"
               className="h-8 w-auto object-contain cursor-pointer transition-opacity duration-300"
               onClick={() => {
                 setIsSafeOpen(false);
@@ -64,47 +61,42 @@ export default function App() {
             />
           </div>
         </div>
-        <div className={`flex items-center space-x-6 md:space-x-8 text-[15px] font-medium transition-colors duration-300 ${
-          isScrolled ? 'text-gray-300' : 'text-[#4A5568]'
-        }`}>
-          <button 
+        <div className={`flex items-center space-x-6 md:space-x-8 text-[15px] font-medium transition-colors duration-300 ${isScrolled ? 'text-gray-300' : 'text-[#4A5568]'
+          }`}>
+          <button
             onClick={() => {
               setIsContactOpen(false);
               setIsTeamOpen(true);
-            }} 
-            className={`hidden md:block text-[14px] active:scale-95 transition-all cursor-pointer ${
-              isScrolled ? 'hover:text-white hover:opacity-80' : 'hover:text-gray-500 hover:opacity-80'
-            }`}
+            }}
+            className={`hidden md:block text-[14px] active:scale-95 transition-all cursor-pointer ${isScrolled ? 'hover:text-white hover:opacity-80' : 'hover:text-gray-500 hover:opacity-80'
+              }`}
           >
             Our Team
           </button>
-          <button 
+          <button
             onClick={() => {
               setIsTeamOpen(false);
               setIsContactOpen(true);
-            }} 
-            className={`hidden md:block text-[14px] active:scale-95 transition-all cursor-pointer ${
-              isScrolled ? 'hover:text-white hover:opacity-80' : 'hover:text-gray-500 hover:opacity-80'
-            }`}
+            }}
+            className={`hidden md:block text-[14px] active:scale-95 transition-all cursor-pointer ${isScrolled ? 'hover:text-white hover:opacity-80' : 'hover:text-gray-500 hover:opacity-80'
+              }`}
           >
             Contact
           </button>
-          <button className={`transition-colors ${
-            isScrolled ? 'hover:text-white' : 'hover:text-gray-900'
-          }`} aria-label="Search">
+          <button className={`transition-colors ${isScrolled ? 'hover:text-white' : 'hover:text-gray-900'
+            }`} aria-label="Search">
             <Search className="w-5 h-5" strokeWidth={2} />
           </button>
           <div className="relative">
-            <button 
-              className={`active:scale-95 transition-all ${
-                isScrolled ? 'hover:text-white' : 'hover:text-gray-900'
-              }`} 
+            <button
+              className={`active:scale-95 transition-all ${isScrolled ? 'hover:text-white' : 'hover:text-gray-900'
+                }`}
               aria-label="Menu"
               onClick={() => setIsMenuDropdownOpen(!isMenuDropdownOpen)}
             >
               <Menu className="w-6 h-6" strokeWidth={2} />
             </button>
-            
+
             {/* Menu Dropdown */}
             <AnimatePresence>
               {isMenuDropdownOpen && (
@@ -172,29 +164,29 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section className="px-4 md:px-6 lg:px-8 pb-4">
-          <motion.div 
-            initial={{ 
-              scale: 1.15, 
+          <motion.div
+            initial={{
+              scale: 1.15,
               borderRadius: 0,
               margin: "-1rem -1rem 0 -1rem"
             }}
-            animate={{ 
-              scale: 1, 
+            animate={{
+              scale: 1,
               borderRadius: "1.5rem",
               margin: "0"
             }}
-            transition={{ 
-              duration: 1.2, 
+            transition={{
+              duration: 1.2,
               ease: [0.16, 1, 0.3, 1]
             }}
             className="relative w-full rounded-3xl overflow-hidden min-h-[80vh] flex bg-[#111827]"
           >
             {/* Background Image */}
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
-              style={{ backgroundImage: `url(${heroBgImg})` }}
+              style={{ backgroundImage: `url(${IMAGES.homepage.bg})` }}
             />
-            
+
             {/* Gradients to ensure text readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden"></div>
@@ -202,119 +194,119 @@ export default function App() {
 
             {/* Content Container */}
             <div className="relative w-full flex flex-col justify-between p-6 sm:p-10 md:p-14 lg:p-20 h-full">
-                {/* Left Content */}
-                <div className="max-w-3xl text-white pt-8 md:pt-16 z-10">
-                  <motion.h1 
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-[2.25rem] sm:text-[2.75rem] md:text-5xl lg:text-[3.5rem] font-medium leading-[1.1] mb-6 text-white drop-shadow-md"
-                  >
-                    A Safe, Stable Vaccine and <br className="hidden sm:block" />
-                    Immunotherapy Solution. <br className="hidden sm:block" />
-                    For everyone, everywhere.
-                  </motion.h1>
-                  
-                  <motion.div 
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                    className="mt-6 md:mt-8 text-gray-200 text-[1.05rem] md:text-xl font-light tracking-wide"
-                  >
-                    <p className="mb-3 text-gray-100">An accelerated platform technology for:</p>
-                    <ul className="list-disc pl-6 space-y-1.5 marker:text-gray-400">
-                      <li>COVID & Long COVID</li>
-                      <li>Breast Cancer and Glioblastoma</li>
-                      <li>Ebola and Marburg</li>
-                    </ul>
-                  </motion.div>
-
-                  {/* Pills */}
-                  <motion.div 
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex flex-wrap gap-3 mt-8"
-                  >
-                    <span 
-                      onClick={() => setIsSafeOpen(true)}
-                      className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-all cursor-pointer"
-                    >
-                      Safe <ArrowUpRight className="ml-2 w-3.5 h-3.5 opacity-70" />
-                    </span>
-                    <span 
-                      onClick={() => setIsStableOpen(true)}
-                      className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-all cursor-pointer"
-                    >
-                      Stable <ArrowUpRight className="ml-2 w-3.5 h-3.5 opacity-70" />
-                    </span>
-                    <span 
-                      onClick={() => setIsSolutionOpen(true)}
-                      className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-all cursor-pointer"
-                    >
-                      Solution <ArrowUpRight className="ml-2 w-3.5 h-3.5 opacity-70" />
-                    </span>
-                  </motion.div>
-
-                  {/* Button */}
-                  <motion.button 
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1.9, ease: [0.16, 1, 0.3, 1] }}
-                    className="mt-10 inline-flex items-center bg-white text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-lg active:scale-[0.98]"
-                  >
-                    Meet Our Team <ChevronRight className="ml-2 w-4 h-4 text-gray-500" />
-                  </motion.button>
-                </div>
-
-                {/* Desktop Right Bottom Content */}
-                <motion.div 
-                  initial={{ opacity: 0, x: 50 }}
+              {/* Left Content */}
+              <div className="max-w-3xl text-white pt-8 md:pt-16 z-10">
+                <motion.h1
+                  initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
-                  className="hidden lg:flex absolute bottom-20 right-20 flex-col items-end space-y-3 text-gray-200 font-medium tracking-wide text-[0.95rem] z-10"
+                  transition={{ duration: 0.8, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-[2.25rem] sm:text-[2.75rem] md:text-5xl lg:text-[3.5rem] font-medium leading-[1.1] mb-6 text-white drop-shadow-md"
                 >
-                    <p onClick={() => document.getElementById('proven-science')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
-                      <span>PROVEN SCIENCE</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
-                    </p>
-                    <p onClick={() => document.getElementById('patent-protection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
-                      <span>ROBUST PATENT PROTECTION</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
-                    </p>
-                    <p onClick={() => document.getElementById('clinical-readiness')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
-                      <span>IMMEDIATE CLINICAL READINESS</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
-                    </p>
-                    <p onClick={() => document.getElementById('derisked-path')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
-                      <span>DE-RISKED PATH TO SUCCESS</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
-                    </p>
-                    <p className="hover:text-white transition-colors cursor-default drop-shadow-sm flex items-center gap-2 group">
-                      <span>STRONG LEADERSHIP</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
-                    </p>
-                </motion.div>
-                
-                {/* Mobile / Tablet Bottom Content */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
-                  className="lg:hidden mt-16 space-y-2.5 text-gray-200 font-medium tracking-wide text-xs sm:text-sm z-10 pb-2"
+                  A Safe, Stable Vaccine and <br className="hidden sm:block" />
+                  Immunotherapy Solution. <br className="hidden sm:block" />
+                  For everyone, everywhere.
+                </motion.h1>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="mt-6 md:mt-8 text-gray-200 text-[1.05rem] md:text-xl font-light tracking-wide"
                 >
-                    <p onClick={() => document.getElementById('proven-science')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">PROVEN SCIENCE</p>
-                    <p onClick={() => document.getElementById('patent-protection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">ROBUST PATENT PROTECTION</p>
-                    <p onClick={() => document.getElementById('clinical-readiness')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">IMMEDIATE CLINICAL READINESS</p>
-                    <p onClick={() => document.getElementById('derisked-path')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">DE-RISKED PATH TO SUCCESS</p>
-                    <p className="hover:text-white transition-colors cursor-default drop-shadow-sm">STRONG LEADERSHIP</p>
+                  <p className="mb-3 text-gray-100">An accelerated platform technology for:</p>
+                  <ul className="list-disc pl-6 space-y-1.5 marker:text-gray-400">
+                    <li>COVID & Long COVID</li>
+                    <li>Breast Cancer and Glioblastoma</li>
+                    <li>Ebola and Marburg</li>
+                  </ul>
                 </motion.div>
+
+                {/* Pills */}
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex flex-wrap gap-3 mt-8"
+                >
+                  <span
+                    onClick={() => setIsSafeOpen(true)}
+                    className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-all cursor-pointer"
+                  >
+                    Safe <ArrowUpRight className="ml-2 w-3.5 h-3.5 opacity-70" />
+                  </span>
+                  <span
+                    onClick={() => setIsStableOpen(true)}
+                    className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-all cursor-pointer"
+                  >
+                    Stable <ArrowUpRight className="ml-2 w-3.5 h-3.5 opacity-70" />
+                  </span>
+                  <span
+                    onClick={() => setIsSolutionOpen(true)}
+                    className="inline-flex items-center px-4 py-2 rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-all cursor-pointer"
+                  >
+                    Solution <ArrowUpRight className="ml-2 w-3.5 h-3.5 opacity-70" />
+                  </span>
+                </motion.div>
+
+                {/* Button */}
+                <motion.button
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.9, ease: [0.16, 1, 0.3, 1] }}
+                  className="mt-10 inline-flex items-center bg-white text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-lg active:scale-[0.98]"
+                >
+                  Meet Our Team <ChevronRight className="ml-2 w-4 h-4 text-gray-500" />
+                </motion.button>
+              </div>
+
+              {/* Desktop Right Bottom Content */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
+                className="hidden lg:flex absolute bottom-20 right-20 flex-col items-end space-y-3 text-gray-200 font-medium tracking-wide text-[0.95rem] z-10"
+              >
+                <p onClick={() => document.getElementById('proven-science')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
+                  <span>PROVEN SCIENCE</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
+                </p>
+                <p onClick={() => document.getElementById('patent-protection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
+                  <span>ROBUST PATENT PROTECTION</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
+                </p>
+                <p onClick={() => document.getElementById('clinical-readiness')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
+                  <span>IMMEDIATE CLINICAL READINESS</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
+                </p>
+                <p onClick={() => document.getElementById('derisked-path')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm flex items-center gap-2 group">
+                  <span>DE-RISKED PATH TO SUCCESS</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
+                </p>
+                <p className="hover:text-white transition-colors cursor-default drop-shadow-sm flex items-center gap-2 group">
+                  <span>STRONG LEADERSHIP</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-70 transition-opacity" />
+                </p>
+              </motion.div>
+
+              {/* Mobile / Tablet Bottom Content */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
+                className="lg:hidden mt-16 space-y-2.5 text-gray-200 font-medium tracking-wide text-xs sm:text-sm z-10 pb-2"
+              >
+                <p onClick={() => document.getElementById('proven-science')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">PROVEN SCIENCE</p>
+                <p onClick={() => document.getElementById('patent-protection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">ROBUST PATENT PROTECTION</p>
+                <p onClick={() => document.getElementById('clinical-readiness')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">IMMEDIATE CLINICAL READINESS</p>
+                <p onClick={() => document.getElementById('derisked-path')?.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="hover:text-white transition-colors cursor-pointer drop-shadow-sm">DE-RISKED PATH TO SUCCESS</p>
+                <p className="hover:text-white transition-colors cursor-default drop-shadow-sm">STRONG LEADERSHIP</p>
+              </motion.div>
             </div>
           </motion.div>
         </section>
 
         {/* Info Section */}
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -322,7 +314,7 @@ export default function App() {
           className="pt-8 pb-8 md:pt-10 md:pb-10 px-6 text-center max-w-4xl mx-auto"
         >
           <h2 className="text-[1.75rem] sm:text-3xl md:text-[2.5rem] font-medium text-gray-900 mb-5 leading-tight tracking-tight">
-            A next generation biotech company with <br className="hidden md:block"/> deep innovation history.
+            A next generation biotech company with <br className="hidden md:block" /> deep innovation history.
           </h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg font-light tracking-wide">
             At the summit of Science Poised to enter the Clinic.
@@ -386,9 +378,9 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer 
-        onOpenSafe={() => setIsSafeOpen(true)} 
-        onOpenStable={() => setIsStableOpen(true)} 
+      <Footer
+        onOpenSafe={() => setIsSafeOpen(true)}
+        onOpenStable={() => setIsStableOpen(true)}
       />
 
       {/* Slide-up Safe Page Modal */}
@@ -403,7 +395,7 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-white pointer-events-auto"
             />
-            
+
             {/* Sliding Panel */}
             <motion.div
               key="safe-panel"
@@ -433,7 +425,7 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-white pointer-events-auto"
             />
-            
+
             {/* Sliding Panel */}
             <motion.div
               key="stable-panel"
@@ -462,7 +454,7 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-white pointer-events-auto"
             />
-            
+
             {/* Sliding Panel */}
             <motion.div
               key="solution-panel"
@@ -492,7 +484,7 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-white pointer-events-auto"
             />
-            
+
             {/* Sliding Panel */}
             <motion.div
               key="team-panel"
@@ -502,7 +494,7 @@ export default function App() {
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="relative w-full h-full overflow-hidden bg-white pointer-events-auto flex flex-col z-10"
             >
-              <div 
+              <div
                 className="flex-1 overflow-y-auto w-full h-full relative pb-12"
                 onScroll={(e) => {
                   const scrollTop = e.currentTarget.scrollTop;
@@ -528,7 +520,7 @@ export default function App() {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-white pointer-events-auto"
             />
-            
+
             {/* Sliding Panel */}
             <motion.div
               key="contact-panel"

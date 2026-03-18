@@ -1,5 +1,5 @@
-import imgImage12 from "figma:asset/50ebbf119c43534e25fb02faf1a79406f078340f.png";
-import imgPexelsNastyasensei667073353931 from "figma:asset/b02c88a73d07ef325ef31bdbd93bbae87550081c.png";
+import { IMAGES } from "../constants/images";
+
 
 function TitleSubtitle() {
   return (
@@ -22,7 +22,7 @@ function Image() {
   return (
     <div className="h-[383px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[536px] left-[calc(50%+0.5px)] top-[calc(50%+58.5px)] w-[804px]" data-name="image 12">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage12} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image1} />
       </div>
       <div className="absolute bg-[#000c15] inset-0 opacity-20 rounded-[12px]" data-name="BG" />
     </div>
@@ -98,7 +98,7 @@ function Image1() {
   return (
     <div className="h-[383px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[536.065px] left-[calc(50%+0.5px)] top-1/2 w-[804px]" data-name="pexels-nastyasensei-66707-335393 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPexelsNastyasensei667073353931} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image1} />
       </div>
       <div className="absolute bg-[#000c15] inset-0 opacity-20 rounded-[12px]" data-name="BG" />
     </div>

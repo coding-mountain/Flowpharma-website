@@ -1,10 +1,11 @@
 import React from 'react';
+import { IMAGES } from '../../constants/images';
 
 export function FlowVaxProvenScience() {
   return (
     <section id="proven-science" className="bg-[#0c0a00] w-full py-16 md:py-20 px-6 md:px-12">
       <div className="w-full flex flex-col gap-12 lg:gap-16">
-        
+
         {/* Header */}
         <div className="w-full">
           <h2 className="text-3xl md:text-4xl lg:text-[40px] font-medium text-white tracking-[-0.8px] leading-[1.2]">
@@ -15,10 +16,10 @@ export function FlowVaxProvenScience() {
 
         {/* Content Columns */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Column (Timeline/Text) */}
           <div className="flex-1 flex flex-col w-full space-y-6">
-            
+
             {/* Item 1 */}
             <div className="flex flex-col gap-4 pb-6 border-b border-white/20">
               <span className="bg-[#e3e3e3] text-[#4e5157] text-sm px-4 py-2 rounded-md w-fit font-medium leading-none">
@@ -69,7 +70,7 @@ export function FlowVaxProvenScience() {
               <h3 className="text-[28px] text-white font-bold tracking-[-0.56px]">
                 The Proven Platform
               </h3>
-              
+
               <div className="flex flex-col gap-6">
                 <div>
                   <h4 className="text-2xl text-[#eee] font-normal tracking-[-0.48px] mb-1">
@@ -79,7 +80,7 @@ export function FlowVaxProvenScience() {
                     The platform has been successfully proven in multiple, diverse animal models.
                   </p>
                 </div>
-                
+
                 <div>
                   <h4 className="text-2xl text-[#eee] font-normal tracking-[-0.48px] mb-1">
                     Safe, Targeted, and Room-Temperature Stable
@@ -95,9 +96,9 @@ export function FlowVaxProvenScience() {
 
           {/* Right Column (Image) */}
           <div className="flex-1 w-full lg:w-1/2 relative rounded-xl overflow-hidden min-h-[400px] lg:min-h-0 self-stretch flex">
-            <img 
-              src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2YWNjaW5lJTIwdmlhbHMlMjBtZWRpY2FsJTIwbGFib3JhdG9yeXxlbnwxfHx8fDE3NzM2NTg5MzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
-              alt="FlowVax vials" 
+            <img
+              src={IMAGES.homepage.flowVax}
+              alt="FlowVax vials"
               className="absolute inset-0 w-full h-full object-cover rounded-xl"
             />
             {/* Optional tint to match design exact spec */}

@@ -1,8 +1,6 @@
 import React from 'react';
 import svgPaths from "../../imports/svg-a2617wsml";
-import imgImage24 from "figma:asset/317164733ee30d8a66b77d743eee51961e8e8c01.png";
-import imgRectangle10 from "figma:asset/166637ad57862826f24edf335a37bd6dca0b9de9.png";
-import currencyImage from 'figma:asset/80ba444e15412bd34046e86c7175c55294e13a41.png';
+import { IMAGES } from '../../constants/images';
 
 // Reusable SVG Line Divider
 const Divider = () => (
@@ -58,7 +56,7 @@ function IconExit() {
 export function DeRiskedPath() {
   return (
     <section id="derisked-path" className="px-4 md:px-6 lg:px-12 py-10 w-full flex flex-col gap-12 lg:gap-16">
-      
+
       {/* Header Area */}
       <div className="flex flex-col items-center text-center gap-6 md:gap-8 mx-auto max-w-4xl">
         <div className="flex flex-col gap-4">
@@ -86,19 +84,19 @@ export function DeRiskedPath() {
 
       {/* Main Content Split Area */}
       <div className="flex flex-col xl:flex-row gap-6 lg:gap-8 w-full">
-        
+
         {/* Left Side: Bridge Image */}
         <div className="w-full xl:w-[48%] relative rounded-3xl overflow-hidden min-h-[400px] sm:min-h-[500px] xl:min-h-[auto]">
-          <img 
-            src={imgImage24} 
-            alt="Bridge at night" 
+          <img
+            src={IMAGES.deRiskedPath.image1}
+            alt="Bridge at night"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
 
         {/* Right Side: Cards Grid */}
         <div className="w-full xl:w-[52%] flex flex-col gap-4 sm:gap-6">
-          
+
           {/* Row 1 */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full">
             {/* The Funding Challenge */}
@@ -106,7 +104,7 @@ export function DeRiskedPath() {
               <h3 className="text-white text-xl md:text-2xl font-medium tracking-tight">The Funding Challenge</h3>
               <Divider />
               <div className="w-full h-[140px] sm:h-[160px] md:h-[173px] mb-5 rounded-xl overflow-hidden relative">
-                <img src={currencyImage} alt="Money challenge" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={IMAGES.deRiskedPath.image2} alt="Money challenge" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="flex flex-col gap-1.5 mt-auto">
                 <h4 className="text-white text-[17px] md:text-lg font-semibold tracking-tight">Capital-Intensive</h4>

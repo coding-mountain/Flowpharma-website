@@ -1,11 +1,11 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Twitter, ArrowRight } from 'lucide-react';
-import logoImg from 'figma:asset/4d977721b2c6317ffd0445b32677bd4971debe28.png';
+import { IMAGES } from '../../constants/images';
 
-export function Footer({ 
+export function Footer({
   onOpenSafe,
-  onOpenStable 
-}: { 
+  onOpenStable
+}: {
   onOpenSafe?: () => void;
   onOpenStable?: () => void;
 }) {
@@ -13,11 +13,11 @@ export function Footer({
     <footer className="w-full bg-[#050505] text-[#eee] pt-20 pb-8 px-6 md:px-12 border-t border-zinc-900">
       <div className="w-full">
         <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-between items-start gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand Column */}
           <div className="w-full md:w-[45%] lg:w-[28%] flex flex-col gap-6">
             <div className="flex items-center select-none">
-              <img src={logoImg} alt="Flo Pharma Logo" className="h-8 w-auto object-contain" />
+              <img src={IMAGES.homepage.logo} alt="Flo Pharma Logo" className="h-8 w-auto object-contain" />
             </div>
             <p className="text-[#a1a1aa] text-[15px] leading-relaxed max-w-sm font-light">
               A next-generation biotech company pioneering patented viral and oncology immunotherapies with a clear, de-risked path to commercialization.
@@ -99,7 +99,7 @@ export function Footer({
                 </a>
               </div>
             </div>
-            
+
             {/* Newsletter/Action */}
           </div>
 

@@ -1,9 +1,6 @@
 import React from 'react';
 import { ChevronRight, X } from 'lucide-react';
-import flowvaxVialsImage from 'figma:asset/44dab16e8bffaedfbd7e55174e9280a21ac4a255.png';
-import warehouseImage from 'figma:asset/2447c94af7b6c1a8401ee89e15678a3a0f10358f.png';
-import freezerImage from 'figma:asset/dcf6f00ae9d2c00773f6aa34d902baf2ad971d90.png';
-
+import { IMAGES } from '../../constants/images';
 interface StablePageContentProps {
   onClose: () => void;
 }
@@ -15,16 +12,16 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
         {/* Breadcrumbs and Close Button */}
         <div className="flex items-center justify-between mb-10">
           <div className="flex items-center space-x-2 text-[13px] text-gray-500">
-            <span 
+            <span
               className="cursor-pointer hover:text-gray-900 transition-colors"
               onClick={onClose}
             >
               Home
             </span>
-            <ChevronRight className="w-3.5 h-3.5" /> 
+            <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-gray-900 font-medium">FlowVax: Stable at Room Temperature</span>
           </div>
-          
+
           <button
             onClick={onClose}
             className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow border border-gray-200 hover:border-gray-300 flex-shrink-0"
@@ -46,7 +43,7 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
 
         {/* 3-Column Detailed Comparison Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 mt-16 pb-8">
-          
+
           {/* Column 1 */}
           <div className="flex flex-col">
             <div className="text-2xl font-bold text-gray-900 leading-snug mb-4">
@@ -54,16 +51,16 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
               Breaking The Cold Chain
             </div>
             <div className="aspect-[1.35/1] rounded-2xl overflow-hidden mb-6 bg-blue-50">
-              <img 
-                src={flowvaxVialsImage}
-                alt="FlowVax Vials" 
+              <img
+                src={IMAGES.safe.safe6}
+                alt="FlowVax Vials"
                 className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-[22px] font-semibold text-gray-900 tracking-tight mb-5">
               Economic and Logistic Impact
             </h3>
-            
+
             <div className="flex flex-col gap-5">
               <div>
                 <span className="text-[15px] font-medium text-gray-800 block mb-0.5">No Cold Chain Required:</span>
@@ -71,7 +68,7 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
                   Eliminates Ultra-Low Temp Freezers & Refrigerated Transport
                 </span>
               </div>
-              
+
               <div>
                 <span className="text-[15px] font-medium text-gray-800 block mb-0.5">Cheaper & Easier Logistics:</span>
                 <span className="text-[14.5px] text-gray-600 font-light leading-relaxed block pr-4">
@@ -88,16 +85,16 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
               Room Temperature Shelf Stability
             </div>
             <div className="aspect-[1.35/1] rounded-2xl overflow-hidden mb-6 bg-gray-100">
-              <img 
-                src={warehouseImage}
-                alt="Room Temperature Storage" 
+              <img
+                src={IMAGES.safe.safe7}
+                alt="Room Temperature Storage"
                 className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-[22px] font-semibold text-gray-900 tracking-tight mb-5">
               Strategic Use cases
             </h3>
-            
+
             <div className="flex flex-col gap-5">
               <div>
                 <span className="text-[15px] font-medium text-gray-800 block mb-0.5">Ideally Suited for Pandemic Stockpiling:</span>
@@ -105,7 +102,7 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
                   Long-Term, Low-Maintenance Storage
                 </span>
               </div>
-              
+
               <div>
                 <span className="text-[15px] font-medium text-gray-800 block mb-0.5">Critical Asset for Biodefense:</span>
                 <span className="text-[14.5px] text-gray-600 font-light leading-relaxed block">
@@ -113,13 +110,13 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
                 </span>
               </div>
             </div>
-            
+
             <div className="w-full h-px bg-gray-200 my-6" />
 
             <h3 className="text-[22px] font-semibold text-gray-900 tracking-tight mb-4">
               Scalable Global Solution
             </h3>
-            
+
             <div>
               <span className="text-[15px] font-medium text-gray-800 block mb-0.5">Inexpensive & Scalable:</span>
               <span className="text-[14.5px] text-gray-600 font-light leading-relaxed block">
@@ -135,13 +132,13 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
               Cold Chain Barriers
             </div>
             <div className="aspect-[1.35/1] rounded-2xl overflow-hidden mb-6 bg-blue-100">
-              <img 
-                src={freezerImage}
-                alt="Freezer Storage" 
+              <img
+                src={IMAGES.safe.safe8}
+                alt="Freezer Storage"
                 className="w-full h-full object-cover"
               />
             </div>
-            
+
             <h3 className="text-[20px] font-semibold text-gray-900 tracking-tight mb-4">
               mRNA VACCINES
             </h3>
@@ -153,7 +150,7 @@ export function StablePageContent({ onClose }: StablePageContentProps) {
                 Requires Specialized Freezing Equipment
               </p>
             </div>
-            
+
             <div className="w-full h-px bg-gray-200 mb-6" />
 
             <h3 className="text-[20px] font-semibold text-gray-900 tracking-tight mb-4">

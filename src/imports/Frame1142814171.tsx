@@ -1,17 +1,12 @@
+import { IMAGES } from "../constants/images";
 import svgPaths from "./svg-6oa7gxdabo";
-import imgImage14 from "figma:asset/40a4b6fe24f14fc45bdfb9e9393f4f4037fcae94.png";
-import imgImage15 from "figma:asset/80845e794122c53f8551457d80143913d0394393.png";
-import imgImage16 from "figma:asset/cd6f4645d5ba9c6e757ed36ffca2a28bbfa81c25.png";
-import imgImage17 from "figma:asset/3dd949de57d69a69f1cbefb4ddfcff478c6c9a6a.png";
-import imgImage18 from "figma:asset/f1859ea86cae45b85b5a01dc5e041244144485d1.png";
-import imgImage19 from "figma:asset/16f067a3aaaa9ddc6d274b117bc6e6210c6ee0c7.png";
-import imgImage20 from "figma:asset/167b6b1fc1e0e7718762282f3d7594ae626a4b9e.png";
+
 
 function Image() {
   return (
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage14} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image2} />
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
         <div className="absolute inset-[8.33%]" data-name="Vector">
@@ -49,7 +44,7 @@ function Image1() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[127.98%] left-[6.85%] max-w-none top-0 w-[86.29%]" src={imgImage15} />
+          <img alt="" className="absolute h-[127.98%] left-[6.85%] max-w-none top-0 w-[86.29%]" src={IMAGES.homepage.image2} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
@@ -88,7 +83,7 @@ function Image2() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-full left-[-0.36%] max-w-none top-[1.46%] w-[100.71%]" src={imgImage16} />
+          <img alt="" className="absolute h-full left-[-0.36%] max-w-none top-[1.46%] w-[100.71%]" src={IMAGES.homepage.image2} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
@@ -127,7 +122,7 @@ function Image3() {
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[116.51%] left-[6.51%] max-w-none top-[-8.26%] w-[86.97%]" src={imgImage17} />
+          <img alt="" className="absolute h-[116.51%] left-[6.51%] max-w-none top-[-8.26%] w-[86.97%]" src={IMAGES.homepage.image2} />
         </div>
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
@@ -190,7 +185,7 @@ function Image4() {
   return (
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage18} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image2} />
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
         <div className="absolute inset-[8.33%]" data-name="Vector">
@@ -227,7 +222,7 @@ function Image5() {
   return (
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage19} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image2} />
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
         <div className="absolute inset-[8.33%]" data-name="Vector">
@@ -264,7 +259,7 @@ function Image6() {
   return (
     <div className="h-[426px] overflow-clip relative rounded-[12px] shrink-0 w-full" data-name="Image">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[436px] left-1/2 top-1/2 w-[432px]" data-name="image 14">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage20} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={IMAGES.homepage.image2} />
       </div>
       <div className="absolute left-[294px] size-[64px] top-[346px]" data-name="plus-sign-circle">
         <div className="absolute inset-[8.33%]" data-name="Vector">
