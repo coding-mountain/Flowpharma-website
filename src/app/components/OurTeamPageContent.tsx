@@ -65,6 +65,12 @@ const teamData = {
       image: IMAGES.ourTeams.team7,
       description: "Borys Chabursky is a strategist extraordinaire in the life sciences arena, bringing decades of experience in guiding healthcare innovation. He is the founder and chairman of Shift Health, where he has led over 500 health science initiatives for more than 300 clients worldwide. Through this work, Borys has helped organizations craft business plans and partnerships that leveraged over $1 billion in funding for biomedical research and innovation. He has a proven talent for building bridges across sectors – facilitating dozens of public–private partnerships in biotech and global health, and advising stakeholders from pharmaceutical companies and hospital networks to government policymakers. Borys has also personally mentored startups (even stepping in as interim CEO for several) and seeded new ventures with angel funding. Colleagues know him as a big-picture thinker with a collaborative spirit; he excels at bringing together diverse experts to solve complex challenges. Despite his far-reaching network and achievements, Borys remains deeply committed to the human side of healthcare – he's driven by a passion to improve global health and ensure innovations reach those who need them. We are fortunate to have his wise, steady guidance and his knack for inspiring teamwork on our board."
     },
+    {
+      name: "John Brady",
+      role: "B.Sc.",
+      image: IMAGES.ourTeams.team18,
+      description: ""
+    }
   ],
   management: [
     {

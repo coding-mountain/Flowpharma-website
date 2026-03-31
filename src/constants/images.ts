@@ -9,7 +9,8 @@ export const IMAGES = {
     logoWhite: "/assets/images/logoWhite.png",
     patentProtection1: "/assets/images/patentProtection1.png",
     patentProtection2: "/assets/images/patentProtection2.png",
-    flowVax: "/assets/images/flowVax.png",
+    flowVax: "/assets/images/flowVax1.png",
+    viewAllIcon: "/assets/icons/view.png",
   },
 
   ourTeams: {
@@ -30,7 +31,11 @@ export const IMAGES = {
     team15: "/assets/images/team15.png",
     team16: "/assets/images/team16.png",
     team17: "/assets/images/team17.png",
+    team18: "/assets/images/team18.png",
     blank: "/assets/images/blank.png",
+    ReidRubsamen: "/assets/images/ReidRubsamen.png",
+    PaulHarris: "/assets/images/PaulHarris.png",
+    CVHerst: "/assets/images/CVHerst.png",
   },
 
   safe: {

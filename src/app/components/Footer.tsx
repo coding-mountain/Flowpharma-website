@@ -17,7 +17,7 @@ export function Footer({
           {/* Brand Column */}
           <div className="w-full md:w-[45%] lg:w-[28%] flex flex-col gap-6">
             <div className="flex items-center select-none">
-              <img src={IMAGES.homepage.logo} alt="Flo Pharma Logo" className="h-8 w-auto object-contain" />
+              <img src={IMAGES.homepage.logoWhite} alt="Flo Pharma Logo" className="h-8 w-auto object-contain" />
             </div>
             <p className="text-[#a1a1aa] text-[15px] leading-relaxed max-w-sm font-light">
               A next-generation biotech company pioneering patented viral and oncology immunotherapies with a clear, de-risked path to commercialization.
@@ -81,9 +81,8 @@ export function Footer({
               <div className="flex items-start gap-3 text-[#a1a1aa]">
                 <MapPin className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
                 <span className="text-[15px] font-light leading-relaxed">
-                  Sydney Innovation Hub<br />
-                  Level 4, 11 Biotech Way<br />
-                  Sydney, NSW 2000, Australia
+                  924 East 7th St #200<br />
+                  Austin TX 78702
                 </span>
               </div>
               <div className="flex items-center gap-3 text-[#a1a1aa]">
