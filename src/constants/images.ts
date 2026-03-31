@@ -4,13 +4,13 @@ const filterPath = (path: string) => path.replace("/public/", "/");
 
 export const IMAGES = {
   homepage: {
-    bg: "/assets/images/home-bg.png",
-    logo: "/assets/images/logo.png",
-    logoWhite: "/assets/images/logoWhite.png",
-    patentProtection1: "/assets/images/patentProtection1.png",
-    patentProtection2: "/assets/images/patentProtection2.png",
-    flowVax: "/assets/images/flowVax1.png",
-    viewAllIcon: "/assets/icons/view.png",
+    bg: filterPath("/assets/images/home-bg.png"),
+    logo: filterPath("/assets/images/logo.png"),
+    logoWhite: filterPath("/assets/images/logoWhite.png"),
+    patentProtection1: filterPath("/assets/images/patentProtection1.png"),
+    patentProtection2: filterPath("/assets/images/patentProtection2.png"),
+    flowVax: filterPath("/assets/images/flowVax1.png"),
+    viewAllIcon: filterPath("/assets/icons/view.png"),
   },
 
   ourTeams: {
