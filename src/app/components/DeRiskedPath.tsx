@@ -100,7 +100,7 @@ export function DeRiskedPath() {
           {/* Row 1 */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full">
             {/* The Funding Challenge */}
-            <div className="bg-[#0c0a00] p-5 md:p-6 rounded-2xl flex flex-col w-full sm:w-[42%] shrink-0 border border-white/5">
+            {/* <div className="bg-[#0c0a00] p-5 md:p-6 rounded-2xl flex flex-col w-full sm:w-[42%] shrink-0 border border-white/5">
               <h3 className="text-white text-xl md:text-2xl font-medium tracking-tight">The Funding Challenge</h3>
               <Divider />
               <div className="w-full h-[140px] sm:h-[160px] md:h-[173px] mb-5 rounded-xl overflow-hidden relative">
@@ -112,10 +112,10 @@ export function DeRiskedPath() {
                   Breakthrough cancer research is traditionally capital-intensive, often leading to significant equity dilution for early investors.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* Market Opportunity & Exit */}
-            <div className="bg-[#0c0a00] p-5 md:p-6 rounded-2xl flex flex-col w-full sm:w-[58%] border border-white/5">
+            <div className="bg-[#0c0a00] p-5 md:p-6 rounded-2xl flex flex-col w-full  border border-white/5">
               <h3 className="text-white text-xl md:text-2xl font-medium tracking-tight">Market Opportunity & Exit</h3>
               <Divider />
               <div className="flex flex-col sm:flex-row gap-8 sm:gap-6 mt-2">
@@ -166,7 +166,7 @@ export function DeRiskedPath() {
               <div className="flex flex-col mt-2">
                 <h4 className="text-white text-[15px] md:text-[16px] font-semibold tracking-tight mb-1.5">Reinvest Capital into Oncology</h4>
                 <p className="text-[#eee] text-[15px] md:text-base font-extralight leading-relaxed">
-                  Programs: Direct the funding generated in Step 1 to advanced Glioblastoma (GBM) and other cancer vaccines into Phase 1/2 clinical trials.
+                  Programs: Direct the funding generated in Step 1 to advance Glioblastoma (GBM) and other cancer vaccines into Phase 1/2 clinical trials.
                 </p>
               </div>
             </div>

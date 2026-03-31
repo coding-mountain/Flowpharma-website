@@ -12,6 +12,7 @@ import { SolutionPageContent } from './components/SolutionPageContent';
 import { OurTeamPageContent } from './components/OurTeamPageContent';
 import { ContactPageContent } from './components/ContactPageContent';
 import { IMAGES } from '../constants/images';
+import { MeetTeam } from './components/MeetTeam';
 
 export default function App() {
   const [isSafeOpen, setIsSafeOpen] = useState(false);
@@ -316,9 +317,7 @@ export default function App() {
           <h2 className="text-[1.75rem] sm:text-3xl md:text-[2.5rem] font-medium text-gray-900 mb-5 leading-tight tracking-tight">
             A next generation biotech company with <br className="hidden md:block" /> deep innovation history.
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg font-light tracking-wide">
-            At the summit of Science Poised to enter the Clinic.
-          </p>
+
         </motion.section>
 
         {/* 100px White Space Spacer */}
@@ -371,6 +370,19 @@ export default function App() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
         >
           <DeRiskedPath />
+        </motion.div>
+
+        {/* 100px White Space Spacer */}
+        <div className="w-full h-[100px] bg-white" aria-hidden="true" />
+
+        {/*Meet our team Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-150px" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+        >
+          <MeetTeam />
         </motion.div>
 
         {/* 100px White Space Spacer */}

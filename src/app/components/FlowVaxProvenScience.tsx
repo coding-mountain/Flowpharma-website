@@ -45,7 +45,7 @@ export function FlowVaxProvenScience() {
                   Full SARS-CoV-2 Protection
                 </h3>
                 <p className="text-[#aaa] text-lg font-light leading-relaxed">
-                  Vaccination resulted in full protection against severe infection and virus-associated pneumonia in Rhesus Macaques
+                  Vaccination resulted in full protection against virus-associated pneumonia in Rhesus Macaques.
                 </p>
               </div>
             </div>

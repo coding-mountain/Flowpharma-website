@@ -13,7 +13,7 @@ export function PatentProtection() {
             Securing the Future of FlowVax
           </h2>
           <p className="text-[#212121] text-lg font-light leading-relaxed lg:max-w-2xl">
-            Securing exclusive rights and ensuring global growth for Flow Pharma's innovative cancer vaccine platform
+            Securing exclusive rights and ensuring global growth for Flow Pharma&apos;s innovative vaccine platform
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export function PatentProtection() {
 
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-1 pb-6 border-b border-black/20">
-                  <h4 className="text-2xl text-[#0a0a0a] font-normal tracking-[-0.48px]">Global Jurisdictional Reach</h4>
+                  <h4 className="text-2xl text-[#0a0a0a] font-normal tracking-[-0.48px]">Global Reach</h4>
                   <p className="text-[#212121] text-lg font-light leading-relaxed">
                     Robust protection established across multiple international territories.
                   </p>
