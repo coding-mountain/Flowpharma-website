@@ -28,7 +28,7 @@ export function TeamMemberDetail({ member, onClose }: TeamMemberDetailProps) {
           className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={onClose}
         />
-        
+
         {/* Modal Content */}
         <motion.div
           initial={{ y: 50, opacity: 0, scale: 0.95 }}
@@ -50,12 +50,12 @@ export function TeamMemberDetail({ member, onClose }: TeamMemberDetailProps) {
           <div className="overflow-y-auto max-h-[90vh]">
             <div className="flex flex-col md:flex-row">
               {/* Image Section */}
-              <div className="md:w-2/5 bg-gray-100 flex-shrink-0">
-                <div className="w-full h-[400px] md:h-[600px] relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover object-center"
+              <div className="md:w-2/5 bg-gray-100 flex-shrink-0 relative">
+                <div className="w-full h-[400px] md:h-[600px] ">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="absolute w-full h-full object-contain block inset-0 "
                   />
                 </div>
               </div>
