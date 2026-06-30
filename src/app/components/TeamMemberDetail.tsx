@@ -1,6 +1,6 @@
-import React from 'react';
-import { X } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import React from "react";
+import { X } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 
 interface TeamMember {
   name: string;
@@ -19,7 +19,7 @@ export function TeamMemberDetail({ member, onClose }: TeamMemberDetailProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[60] flex items-center justify-center">
+      <div className="fixed inset-0 z-[60] pt-16 flex items-center justify-center">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -28,7 +28,7 @@ export function TeamMemberDetail({ member, onClose }: TeamMemberDetailProps) {
           className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={onClose}
         />
-        
+
         {/* Modal Content */}
         <motion.div
           initial={{ y: 50, opacity: 0, scale: 0.95 }}
@@ -50,12 +50,12 @@ export function TeamMemberDetail({ member, onClose }: TeamMemberDetailProps) {
           <div className="overflow-y-auto max-h-[90vh]">
             <div className="flex flex-col md:flex-row">
               {/* Image Section */}
-              <div className="md:w-2/5 bg-gray-100 flex-shrink-0">
-                <div className="w-full h-[400px] md:h-[600px] relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover object-center"
+              <div className="md:w-2/5 bg-gray-100 flex-shrink-0 relative">
+                <div className="w-full h-[400px] md:h-[600px] ">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="absolute w-full h-full object-contain block inset-0 "
                   />
                 </div>
               </div>
@@ -76,7 +76,8 @@ export function TeamMemberDetail({ member, onClose }: TeamMemberDetailProps) {
                   {/* Description */}
                   <div className="pt-4 border-t border-gray-200">
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed font-light">
-                      {member.description || "Detailed biography and professional background information will be added here. This section will highlight their expertise, achievements, and contributions to the organization."}
+                      {member.description ||
+                        "Detailed biography and professional background information will be added here. This section will highlight their expertise, achievements, and contributions to the organization."}
                     </p>
                   </div>
                 </div>
