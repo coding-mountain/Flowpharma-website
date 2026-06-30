@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { ChevronRight, X, Mail, MapPin, Phone } from 'lucide-react';
-import { Footer } from './Footer';
-import { IMAGES } from '../../constants/images';
+import React, { useState } from "react";
+import { ChevronRight, X, Mail, MapPin, Phone } from "lucide-react";
+import { Footer } from "./Footer";
+import { IMAGES } from "../../constants/images";
 
 interface ContactPageContentProps {
   onClose: () => void;
@@ -9,24 +9,28 @@ interface ContactPageContentProps {
 
 export function ContactPageContent({ onClose }: ContactPageContentProps) {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message. We will get back to you soon!');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message. We will get back to you soon!");
+    setFormData({ name: "", email: "", company: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -61,7 +65,8 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
             Get in Touch
           </h1>
           <p className="text-[15px] sm:text-[17px] text-gray-600 font-light leading-relaxed max-w-3xl">
-            Have questions about FlowVax or interested in partnering with us? We'd love to hear from you.
+            Have questions about FlowVax or interested in partnering with us?
+            We'd love to hear from you.
           </p>
         </div>
 
@@ -70,12 +75,17 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
           {/* Contact Form */}
           <div>
             <div className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm">
-              <h2 className="text-xl sm:text-2xl font-medium text-gray-900 mb-4 sm:mb-6">Send us a Message</h2>
+              <h2 className="text-xl sm:text-2xl font-medium text-gray-900 mb-4 sm:mb-6">
+                Send us a Message
+              </h2>
 
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -91,7 +101,10 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -108,7 +121,10 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Company / Organization
                   </label>
                   <input
@@ -123,7 +139,10 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -152,7 +171,9 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
           <div className="space-y-6 sm:space-y-8">
             {/* Contact Info Card */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl sm:rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg sm:text-xl font-medium text-gray-900 mb-4 sm:mb-6">Contact Information</h2>
+              <h2 className="text-lg sm:text-xl font-medium text-gray-900 mb-4 sm:mb-6">
+                Contact Information
+              </h2>
 
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start space-x-3 sm:space-x-4">
@@ -160,35 +181,47 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-700 mb-1">Email</p>
-                    <a href="mailto:info@flowpharma.com" className="text-sm text-gray-600 hover:text-blue-600 transition-colors break-all">
-                      info@flowpharma.com
+                    <p className="text-sm font-medium text-gray-700 mb-1">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:inquiries@flo-pharma.com"
+                      className="text-sm text-gray-600 hover:text-blue-600 transition-colors break-all"
+                    >
+                      inquiries@flo-pharma.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3 sm:space-x-4">
+                {/* <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-200">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-700 mb-1">Phone</p>
-                    <a href="tel:+1234567890" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                    <p className="text-sm font-medium text-gray-700 mb-1">
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+1234567890"
+                      className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                    >
                       +1 (234) 567-890
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 border border-gray-200">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-700 mb-1">Address</p>
+                    <p className="text-sm font-medium text-gray-700 mb-1">
+                      Address
+                    </p>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Flow Pharma Inc.<br />
-                      San Francisco, CA<br />
-                      United States
+                      Flo Pharma Inc.
+                      <br />
+                      924 east 7th St #200 Austin, TX 78702
                     </p>
                   </div>
                 </div>
@@ -204,17 +237,22 @@ export function ContactPageContent({ onClose }: ContactPageContentProps) {
                   className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover flex-shrink-0"
                 />
                 <div className="min-w-0">
-                  <h3 className="text-base sm:text-lg font-medium text-gray-900 truncate">Dylan Bruno</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">Director of Investor Relations</p>
+                  <h3 className="text-base sm:text-lg font-medium text-gray-900 truncate">
+                    Dylan Bruno
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    Director of Investor Relations
+                  </p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                For investor relations, media inquiries, and partnership opportunities, please reach out through our contact form or email directly.
+                For investor relations, media inquiries, and partnership
+                opportunities, please reach out through our contact form or
+                email directly.
               </p>
             </div>
           </div>
         </div>
-
       </div>
       <Footer />
     </div>
